@@ -85,7 +85,7 @@ bot.on('callback_query', (query) => {
     bot.sendPhoto(chatId, 'photo.jpg', {
       reply_markup: {
         inline_keyboard: keyboardStart,
-      },
+      }
     });
   }
 
