@@ -1,11 +1,11 @@
 {
-  "name": "TimeTableGroupP11_bot",
+  "name": "time",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
-"scripts": {
+  "scripts": {
     "dev": "nodemon index.js",
-		"start": "node index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Vova",
