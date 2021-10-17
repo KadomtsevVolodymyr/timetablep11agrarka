@@ -92,7 +92,7 @@ bot.on('callback_query', (query) => {
   if (query.data === 'lessons') {
     bot.sendMessage(chatId, 'Выбирай день недели!', {
       reply_markup: { inline_keyboard: keyboard },
-    });
+    }).catch(e => console.log("error in 💣 Вы пригласили ", e ));
   }
 
   if (query.data === 'time') {
@@ -110,7 +110,7 @@ bot.on('callback_query', (query) => {
   if (query.data === 'tuesday') {
     bot.sendPhoto(chatId, 'tuesday.jpg', {
       reply_markup: { inline_keyboard: keyboard },
-    });
+    }).catch(e => console.log("error in 💣 Вы пригласили ", e ));
   }
 
   if (query.data === 'wednesday') {
@@ -118,17 +118,17 @@ bot.on('callback_query', (query) => {
       chatId,
       'wensday.jpg', //Замена на фото
       { reply_markup: { inline_keyboard: keyboard } }
-    );
+    ).catch(e => console.log("error in 💣 Вы пригласили ", e ));
   }
   if (query.data === 'thursday') {
     bot.sendPhoto(chatId, 'thursday.jpg', {
       reply_markup: { inline_keyboard: keyboard },
-    });
+    }).catch(e => console.log("error in 💣 Вы пригласили ", e ));
   }
   if (query.data === 'friday') {
     bot.sendPhoto(chatId, 'friday.jpg', {
       reply_markup: { inline_keyboard: keyboard },
-    });
+    }).catch(e => console.log("error in 💣 Вы пригласили ", e ));
   }
   if (query.data === 'saturday') {
     bot.sendPhoto(
