@@ -96,7 +96,7 @@ bot.on('callback_query', (query) => {
   }
 
   if (query.data === 'time') {
-    bot.sendPhoto(chatId, 'time.jpg', {
+    bot.sendPhoto(chatId, '/friday.jpg', {
       reply_markup: { inline_keyboard: keyboardMenu },
     }); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
   }
