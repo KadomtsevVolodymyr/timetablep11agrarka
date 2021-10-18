@@ -93,7 +93,7 @@ bot.on('callback_query', (query) => {
       reply_markup: { inline_keyboard: keyboard },
     });
   } else if (query.data === 'time') {
-    bot.sendPhoto(chatId, 'photo/friday.jpg', {
+    bot.sendPhoto(chatId, 'photo/time.jpg', {
       reply_markup: { inline_keyboard: keyboardMenu },
     }); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
   } else if (query.data === 'monday') {
