@@ -82,59 +82,48 @@ bot.on('callback_query', (query) => {
   const chatId = query.message.chat.id;
 
   if (query.data === 'homeMenu') {
-    bot.sendPhoto(chatId, 'photo.jpg', {
+    bot.sendPhoto(chatId, 'photo/photo.jpg', {
       reply_markup: {
         inline_keyboard: keyboardStart,
-      }
+      },
     });
-  }
-
-  if (query.data === 'lessons') {
+  } else if (query.data === 'lessons') {
     bot.sendMessage(chatId, 'Выбирай день недели!', {
       reply_markup: { inline_keyboard: keyboard },
-    }).catch(e => console.log("error in 💣 Вы пригласили ", e ));
-  }
-
-  if (query.data === 'time') {
-    bot.sendPhoto(chatId, '/friday.jpg', {
+    });
+  } else if (query.data === 'time') {
+    bot.sendPhoto(chatId, 'photo/friday.jpg', {
       reply_markup: { inline_keyboard: keyboardMenu },
     }); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
-  }
-
-  if (query.data === 'monday') {
+  } else if (query.data === 'monday') {
     bot.sendMessage(chatId, 'В этот день в вашей группы нет занятий!', {
       reply_markup: { inline_keyboard: keyboard },
     });
-  }
-
-  if (query.data === 'tuesday') {
-    bot.sendPhoto(chatId, 'tuesday.jpg', {
+  } else if (query.data === 'tuesday') {
+    bot.sendPhoto(chatId, 'photo/tuesday.jpg', {
       reply_markup: { inline_keyboard: keyboard },
-    }).catch(e => console.log("error in 💣 Вы пригласили ", e ));
-  }
-
-  if (query.data === 'wednesday') {
+    });
+  } else if (query.data === 'wednesday') {
     bot.sendPhoto(
       chatId,
-      'wensday.jpg', //Замена на фото
-      { reply_markup: { inline_keyboard: keyboard } }
-    ).catch(e => console.log("error in 💣 Вы пригласили ", e ));
-  }
-  if (query.data === 'thursday') {
-    bot.sendPhoto(chatId, 'thursday.jpg', {
-      reply_markup: { inline_keyboard: keyboard },
-    }).catch(e => console.log("error in 💣 Вы пригласили ", e ));
-  }
-  if (query.data === 'friday') {
-    bot.sendPhoto(chatId, 'friday.jpg', {
-      reply_markup: { inline_keyboard: keyboard },
-    }).catch(e => console.log("error in 💣 Вы пригласили ", e ));
-  }
-  if (query.data === 'saturday') {
-    bot.sendPhoto(
-      chatId,
-      'saturday.jpg', //Замена на фото
+      'photo/wensday.jpg', //Замена на фото
       { reply_markup: { inline_keyboard: keyboard } }
     );
+  } else if (query.data === 'thursday') {
+    bot.sendPhoto(chatId, 'photo/thursday.jpg', {
+      reply_markup: { inline_keyboard: keyboard },
+    });
+  } else if (query.data === 'friday') {
+    bot.sendPhoto(chatId, 'photo/friday.jpg', {
+      reply_markup: { inline_keyboard: keyboard },
+    });
+  } else if (query.data === 'saturday') {
+    bot.sendPhoto(
+      chatId,
+      'photo/saturday.jpg', //Замена на фото
+      { reply_markup: { inline_keyboard: keyboard } }
+    );
+  } else {
+    bot.sendMessage('No');
   }
 });
