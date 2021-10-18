@@ -1,3 +1,4 @@
+process.env['NTBA_FIX_350'] = 1;
 const TelegramBot = require('node-telegram-bot-api');
 
 const token = '2053615815:AAF2s3s4G_bBmfFywbMyfrxZN3mTuW8FsKc';
@@ -118,7 +119,7 @@ bot.on('callback_query', (query) => {
       reply_markup: { inline_keyboard: keyboard },
     });
   } else if (query.data === 'saturday') {
-    bot.sendMediaGroup(
+    bot.sendPhoto(
       chatId,
       'photo/saturday.jpg', //Замена на фото
       { reply_markup: { inline_keyboard: keyboard } },
