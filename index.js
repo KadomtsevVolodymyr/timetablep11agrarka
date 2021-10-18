@@ -118,7 +118,7 @@ bot.on('callback_query', (query) => {
       reply_markup: { inline_keyboard: keyboard },
     });
   } else if (query.data === 'saturday') {
-    bot.sendPhoto(
+    bot.sendMediaGroup(
       chatId,
       'photo/saturday.jpg', //Замена на фото
       { reply_markup: { inline_keyboard: keyboard } },
