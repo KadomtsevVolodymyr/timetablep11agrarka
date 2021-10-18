@@ -121,7 +121,8 @@ bot.on('callback_query', (query) => {
     bot.sendPhoto(
       chatId,
       'photo/saturday.jpg', //Замена на фото
-      { reply_markup: { inline_keyboard: keyboard } }
+      { reply_markup: { inline_keyboard: keyboard } },
+      {}
     );
   } else {
     bot.sendMessage('No');
