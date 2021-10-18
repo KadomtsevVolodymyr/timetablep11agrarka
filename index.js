@@ -7,7 +7,7 @@ const bot = new TelegramBot(token, { polling: true });
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
   bot.sendMessage(chatId, 'Хорошего пользования ботом!📅');
-  bot.sendPhoto(chatId, 'photo.jpg', {
+  bot.sendPhoto(chatId, 'photo/photo.jpg', {
     reply_markup: {
       inline_keyboard: keyboardStart,
     },
